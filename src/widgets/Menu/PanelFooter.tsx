@@ -81,7 +81,7 @@ const PanelFooter: React.FC<Props> = ({
         {cakePriceUsd ? (
           <PriceLink href={priceLink} target="_blank">
             <PancakeRoundIcon width="24px" mr="8px" />
-            <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+            <Text color="textSubtleMenu" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
           </PriceLink>
         ) : (
           <Skeleton width={80} height={24} />
@@ -89,13 +89,13 @@ const PanelFooter: React.FC<Props> = ({
         <Flex>
           {socials.map((social, index) => {
             const Icon = Icons[social.icon];
-            const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
+            const iconProps = { width: "24px", color: "textSubtleMenu", style: { cursor: "pointer" } };
             const mr = index < socials.length - 1 ? "24px" : 0;
             if (social.items) {
               return (
                 <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
                   {social.items.map((item) => (
-                    <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
+                    <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtleMenu">
                       {item.label}
                     </Link>
                   ))}
@@ -111,8 +111,8 @@ const PanelFooter: React.FC<Props> = ({
         </Flex>
       </SocialEntry>
       <SettingsEntry>
-        <Button variant="text" onClick={() => toggleTheme(!isDark)}>
-          {/* alignItems center is a Safari fix */}
+        {/* alignItems center is a Safari fix */}
+        {/* <Button variant="text" onClick={() => toggleTheme(!isDark)}>
           <Flex alignItems="center">
             <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
             <Text color="textDisabled" mx="4px">
@@ -120,12 +120,12 @@ const PanelFooter: React.FC<Props> = ({
             </Text>
             <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
           </Flex>
-        </Button>
+        </Button> */}
         <Dropdown
           position="top-right"
           target={
-            <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-              <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
+            <Button variant="text" startIcon={<LanguageIcon color="textSubtleMenu" width="24px" />}>
+              <Text color="textSubtleMenu">{currentLang?.toUpperCase()}</Text>
             </Button>
           }
         >
