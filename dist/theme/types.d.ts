@@ -42,8 +42,11 @@ export declare type Colors = {
     text: string;
     textDisabled: string;
     textSubtle: string;
+    textSubtleMenu: string;
+    textSubtleSubMenu: string;
     borderColor: string;
     card: string;
+    toggleHandle: string;
     gradients: Gradients;
     binance: string;
 };
