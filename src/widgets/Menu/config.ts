@@ -10,11 +10,11 @@ export const links = [
     items: [
       {
         label: "Exchange",
-        href: "https://exchange.pancakeswap.finance",
+        href: "https://exchange.lighteningcash.finance",
       },
       {
         label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool",
+        href: "https://exchange.lighteningcash.finance/#/pool",
       },
     ],
   },
@@ -59,19 +59,19 @@ export const links = [
     items: [
       {
         label: "Overview",
-        href: "https://pancakeswap.info",
+        href: "https://lighteningcash.info",
       },
       {
         label: "Tokens",
-        href: "https://pancakeswap.info/tokens",
+        href: "https://lighteningcash.info/tokens",
       },
       {
         label: "Pairs",
-        href: "https://pancakeswap.info/pairs",
+        href: "https://lighteningcash.info/pairs",
       },
       {
         label: "Accounts",
-        href: "https://pancakeswap.info/accounts",
+        href: "https://lighteningcash.info/accounts",
       },
     ],
   },
@@ -95,19 +95,19 @@ export const links = [
     items: [
       // {
       //   label: "Voting",
-      //   href: "https://voting.pancakeswap.finance",
+      //   href: "https://voting.lighteningcash.finance",
       // },
       {
         label: "Github",
-        href: "https://github.com/goosedefi/",
+        href: "https://github.com/LighteningCash",
       },
       {
         label: "Docs",
-        href: "https://goosedefi.gitbook.io/goose-finance/",
+        href: "https://lighteningcash.gitbook.io/lighteningcash/",
       },
       {
         label: "Blog",
-        href: "https://goosefinance.medium.com/",
+        href: "https://lightening-cash.medium.com/",
       },
     ],
   },
@@ -120,63 +120,68 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/goosedefi",
+        href: "https://t.me/lighteningcash",
       },
       // {
       //   label: "Bahasa Indonesia",
-      //   href: "https://t.me/PancakeSwapIndonesia",
+      //   href: "https://t.me/lighteningcashIndonesia",
       // },
-      {
-        label: "中文",
-        href: "https://t.me/goosefinancechinese",
-      },
+      // {
+      //   label: "中文",
+      //   href: "https://t.me/lighteningcashchinese",
+      // },
       // {
       //   label: "Tiếng Việt",
-      //   href: "https://t.me/PancakeSwapVN",
+      //   href: "https://t.me/lighteningcashVN",
       // },
       // {
       //   label: "Italiano",
-      //   href: "https://t.me/pancakeswap_ita",
+      //   href: "https://t.me/lighteningcash_ita",
       // },
-      {
-        label: "русский",
-        href: "https://t.me/goosefinancerussian",
-      },
-      {
-        label: "Türkiye",
-        href: "https://t.me/GooseFinanceTurkey",
-      },
+      // {
+      //   label: "русский",
+      //   href: "https://t.me/lighteningcashrussian",
+      // },
+      // {
+      //   label: "Türkiye",
+      //   href: "https://t.me/lighteningcashTurkey",
+      // },
       // {
       //   label: "Português",
-      //   href: "https://t.me/PancakeSwapPortuguese",
+      //   href: "https://t.me/lighteningcashPortuguese",
       // },
-      {
-        label: "Español",
-        href: "https://t.me/goosefinancespanish",
-      },
-      {
-        label: "日本語",
-        href: "https://t.me/goosefinancejapanese",
-      },
+      // {
+      //   label: "Español",
+      //   href: "https://t.me/lighteningcashspanish",
+      // },
+      // {
+      //   label: "日本語",
+      //   href: "https://t.me/lighteningcashjapanese",
+      // },
       // {
       //   label: "Français",
-      //   href: "https://t.me/pancakeswapfr",
+      //   href: "https://t.me/lighteningcashfr",
       // },
       {
         label: "Announcements",
-        href: "https://t.me/goosefinanceann",
+        href: "https://t.me/lightening_cash",
       },
       {
         label: "Price Bot",
-        href: "https://t.me/BinanceRocketEGG",
+        href: "https://t.me/BinanceRocketLIC",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/FinanceGoose",
+    href: "https://twitter.com/CashLightening",
   },
+  // {
+  //     label: "Medium",
+  //     icon: "MediumIcon",
+  //     href: "https://lightening-cash.medium.com/",
+  // },
 ];
 
 export const MENU_HEIGHT = 64;
