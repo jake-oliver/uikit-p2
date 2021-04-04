@@ -23,6 +23,7 @@ export * from "./components/Table";
 export * from "./hooks";
 export * from "./widgets/Modal";
 export * from "./widgets/Menu";
+export * from "./widgets/Footer";
 export * from "./widgets/Toast";
 export * from "./widgets/WalletModal";
 export { default as ResetCSS } from "./ResetCSS";
