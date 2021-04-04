@@ -44,34 +44,47 @@ const StyledFooter = styled.div`
   width: calc(100% - 131px);
   border-radius: 30px 30px 0 0;
   justify-content: space-between;
+  align-items: center;
   @media (max-width: 767px) {
+    & > * {font-size: 14px;}
     flex-direction: column;
     margin-top: 24px;
+    padding: 20px;
     width: calc(100% - 20px);
+    justify-content: center;
   }
   @media (max-width: 400px) {
+    & > * {font-size: 13px;}
     flex-direction: column;
     margin-top: 20px;
+    padding: 20px;
     width: calc(100% - 20px);
+    justify-content: center;
   }
 `;
 
 const FooterSocial = styled.div`
   position: relative;
   display: flex;
-  margin-left: auto;
   align-items: flex-start;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({theme}) => theme.colors.text};
   &:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.primary};
+  }
+  @media (max-width: 767px) {
+    margin-top: 20px;
   }
 `;
 
 const SocialItem = styled(Link)`
   margin-left: 10px;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({theme}) => theme.colors.text};
   &:hover {
     color: #000;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.primary};
+  }
+  @media (max-width: 767px) {
+    margin: 0;
+    padding: 0 5px;
   }
 `;
