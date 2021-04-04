@@ -2272,9 +2272,12 @@ var Footer = function (_a) { return (React.createElement(StyledFooter, null,
             React.createElement(FontAwesomeIcon, { icon: faMediumM, size: "lg" })),
         React.createElement(SocialItem, { href: "https://github.com/LighteningCash" },
             React.createElement(FontAwesomeIcon, { icon: faGithub, size: "lg" }))))); };
-var StyledFooter = styled.div(templateObject_1$C || (templateObject_1$C = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  z-index: ", ";\n  background-color: #151935;\n  margin-top: 24px;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 20px 2rem;\n  width: calc(100% - 131px);\n  border-radius: 30px 30px 0 0;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 767px) {\n    & > * {\n      font-size: 14px;\n    }\n    flex-direction: column;\n    margin-top: 24px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n  @media (max-width: 400px) {\n    & > * {\n      font-size: 13px;\n    }\n    flex-direction: column;\n    margin-top: 20px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  z-index: ", ";\n  background-color: #151935;\n  margin-top: 24px;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 20px 2rem;\n  width: calc(100% - 131px);\n  border-radius: 30px 30px 0 0;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 767px) {\n    & > * {\n      font-size: 14px;\n    }\n    flex-direction: column;\n    margin-top: 24px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n  @media (max-width: 400px) {\n    & > * {\n      font-size: 13px;\n    }\n    flex-direction: column;\n    margin-top: 20px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n"])), function (_a) {
+var StyledFooter = styled.div(templateObject_1$C || (templateObject_1$C = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  z-index: ", ";\n  background-color: ", ";\n  margin-top: 24px;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 20px 2rem;\n  width: calc(100% - 151px);\n  border-radius: 30px 30px 0 0;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 767px) {\n    & > * {\n      font-size: 14px;\n    }\n    flex-direction: column;\n    margin-top: 24px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n  @media (max-width: 400px) {\n    & > * {\n      font-size: 13px;\n    }\n    flex-direction: column;\n    margin-top: 20px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  z-index: ", ";\n  background-color: ", ";\n  margin-top: 24px;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 20px 2rem;\n  width: calc(100% - 151px);\n  border-radius: 30px 30px 0 0;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 767px) {\n    & > * {\n      font-size: 14px;\n    }\n    flex-direction: column;\n    margin-top: 24px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n  @media (max-width: 400px) {\n    & > * {\n      font-size: 13px;\n    }\n    flex-direction: column;\n    margin-top: 20px;\n    padding: 20px;\n    width: calc(100% - 20px);\n    justify-content: center;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.zIndices.modal;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.secondaryBright;
 });
 var FooterSocial = styled.div(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n  color: ", ";\n  &:hover {\n    color: ", ";\n  }\n  @media (max-width: 767px) {\n    margin-top: 20px;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n  color: ", ";\n  &:hover {\n    color: ", ";\n  }\n  @media (max-width: 767px) {\n    margin-top: 20px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
@@ -2407,6 +2410,8 @@ var baseColors = {
     primaryBright: "#f8d33a",
     primaryDark: "#F0B90B",
     secondary: "#111",
+    secondaryBright: "#151935",
+    secondaryDark: "#000422",
     success: "#31D0AA",
     warning: "#FFB237",
 };
