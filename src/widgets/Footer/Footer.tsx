@@ -46,7 +46,9 @@ const StyledFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (max-width: 767px) {
-    & > * {font-size: 14px;}
+    & > * {
+      font-size: 14px;
+    }
     flex-direction: column;
     margin-top: 24px;
     padding: 20px;
@@ -54,7 +56,9 @@ const StyledFooter = styled.div`
     justify-content: center;
   }
   @media (max-width: 400px) {
-    & > * {font-size: 13px;}
+    & > * {
+      font-size: 13px;
+    }
     flex-direction: column;
     margin-top: 20px;
     padding: 20px;
@@ -67,9 +71,9 @@ const FooterSocial = styled.div`
   position: relative;
   display: flex;
   align-items: flex-start;
-  color: ${({theme}) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   &:hover {
-    color: ${({theme}) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
   @media (max-width: 767px) {
     margin-top: 20px;
@@ -78,10 +82,10 @@ const FooterSocial = styled.div`
 
 const SocialItem = styled(Link)`
   margin-left: 10px;
-  color: ${({theme}) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   &:hover {
     color: #000;
-    color: ${({theme}) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
   @media (max-width: 767px) {
     margin: 0;
