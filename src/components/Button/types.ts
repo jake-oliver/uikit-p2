@@ -28,6 +28,7 @@ export type ButtonProps = {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   fullWidth?: boolean;
+  rounded?: boolean;
   as?: "a" | "button" | typeof Link;
   href?: string;
   external?: boolean;

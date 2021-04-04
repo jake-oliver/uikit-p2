@@ -28,6 +28,7 @@ Button.defaultProps = {
   external: false,
   isLoading: false,
   disabled: false,
+  rounded: false,
 };
 
 export default Button;
