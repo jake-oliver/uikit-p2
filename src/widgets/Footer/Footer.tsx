@@ -38,29 +38,33 @@ const StyledFooter = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 20px 2rem;
-  width: calc(100% - 151px);
+  width: calc(100% - 150px);
   border-radius: 30px 30px 0 0;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1199px) {
+    width: calc(100% - 100px);
+    max-width: 1024px;
+  }
   @media (max-width: 767px) {
     & > * {
       font-size: 14px;
     }
     flex-direction: column;
-    margin-top: 24px;
-    padding: 20px;
-    width: calc(100% - 20px);
     justify-content: center;
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 540px;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 479px) {
     & > * {
-      font-size: 13px;
+      font-size: 12px;
     }
     flex-direction: column;
-    margin-top: 20px;
-    padding: 20px;
-    width: calc(100% - 20px);
     justify-content: center;
+    padding: 20px;
+    width: calc(100% - 40px);
   }
 `;
 

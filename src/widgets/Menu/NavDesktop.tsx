@@ -30,18 +30,17 @@ export default NavDesktop;
 const NavWrapper = styled.div`
   position: relative;
   display: flex;
-  margin-top: 4px;
+  margin-top: 5px;
   margin-left: 1.5rem;
   padding-bottom: 8px;
   align-items: flex-start;
-  font-size: 0.875rem;
   font-weight: 700;
 
-  @media (max-width: 767px) {
-    font-size: 0.75rem;
+  @media (max-width: 1023px) {
+    font-size: 0.875rem;
     margin-left: 1rem;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 959px) {
     display: none;
   }
 `;
@@ -49,12 +48,22 @@ const NavWrapper = styled.div`
 const NavDesktopItem = styled.div`
   margin-right: 14px;
   color: ${({ theme }) => theme.colors.text};
-  padding: 14px 8px;
+  padding: 12px 20px;
   border-radius: 5px;
   transition: 0.5s all ease;
   &:hover {
     color: #000;
     background: ${({ theme }) => theme.colors.primary};
     transition: 0.1s all ease;
+  }
+
+  /* @media (max-width: 1023px) {
+    padding: 14px 8px;
+  } */
+  @media (max-width: 767px) {
+    padding: 14px 8px;
+  }
+  @media (max-width: 479px) {
+    padding: 12px 6px;
   }
 `;

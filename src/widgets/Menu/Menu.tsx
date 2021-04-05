@@ -74,7 +74,6 @@ const Menu: React.FC<NavProps> = ({ account, login, logout, links, profile }) =>
           {profile && <Avatar profile={profile} />}
         </LeftRight>
       </StyledHeader>
-      <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
     </>
   );
 };
@@ -86,6 +85,7 @@ const StyledHeader = styled.div`
   display: flex;
   width: 100%;
   z-index: 1;
+  padding: 20px 35px;
   justify-content: space-between;
   align-items: center;
   &::after {
@@ -95,27 +95,28 @@ const StyledHeader = styled.div`
     background: linear-gradient(to right, #000422 53%, #fff0 20%) repeat-x bottom;
     -webkit-background-size: 1rem 2px;
     background-size: 1rem 2px;
-    bottom: -4px;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: 5px;
+  }
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
+  @media (max-width: 479px) {
+    padding: 10px 15px;
+    bottom: 10px;
   }
 `;
 
 const LeftRight = styled(Flex)`
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
 `;
 
 const Logo = styled.div`
-  margin-top: 10px;
-  margin-bottom: 1rem;
-  @media (max-width: 767px) {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  @media (max-width: 400px) {
-    margin: 0;
-    margin-bottom: 10px;
+  margin: 0;
+  @media (max-width: 576px) {
+    margin-top: 10px;
   }
 `;
