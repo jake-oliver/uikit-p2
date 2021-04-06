@@ -28,27 +28,32 @@ const NavDesktop: React.FC<Props> = (props) => {
 export default NavDesktop;
 
 const NavWrapper = styled.div`
-  position: relative;
-  display: flex;
-  margin-top: 5px;
-  margin-left: 1.5rem;
-  padding-bottom: 8px;
-  align-items: flex-start;
-  font-weight: 700;
+  display: none;
 
-  @media (max-width: 1023px) {
-    font-size: 0.875rem;
+  ${({ theme }) => theme.mediaQueries.lg} {
+    display: block;
+    position: relative;
+    display: flex;
     margin-left: 1rem;
+    align-items: flex-start;
+    font-size: 0.875rem;
   }
-  @media (max-width: 959px) {
-    display: none;
+  ${({ theme }) => theme.mediaQueries.xl} {
+    margin-top: 5px;
+    margin-left: 1.5rem;
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  ${({ theme }) => theme.mediaQueries.xxxl} {
+    font-size: 18px;
   }
 `;
 
 const NavDesktopItem = styled.div`
   margin-right: 14px;
-  color: ${({ theme }) => theme.colors.text};
-  padding: 12px 20px;
+  padding: 12px 6px;
+  color: ${({ theme }) => theme.colors.text};  
   border-radius: 5px;
   transition: 0.5s all ease;
   &:hover {
@@ -57,13 +62,10 @@ const NavDesktopItem = styled.div`
     transition: 0.1s all ease;
   }
 
-  /* @media (max-width: 1023px) {
-    padding: 14px 8px;
-  } */
-  @media (max-width: 767px) {
+  ${({ theme }) => theme.mediaQueries.sm} {
     padding: 14px 8px;
   }
-  @media (max-width: 479px) {
-    padding: 12px 6px;
+  ${({ theme }) => theme.mediaQueries.md} {
+    padding: 12px 20px;
   }
 `;
