@@ -85,7 +85,8 @@ const StyledHeader = styled.div`
   display: flex;
   width: 100%;
   z-index: 1;
-  padding: 20px 35px;
+  padding: 10px 15px;
+  bottom: 10px;
   justify-content: space-between;
   align-items: center;
   &::after {
@@ -100,12 +101,12 @@ const StyledHeader = styled.div`
     width: 100%;
     height: 5px;
   }
-  @media (max-width: 767px) {
-    padding: 20px;
-  }
-  @media (max-width: 479px) {
+
+  ${({ theme }) => theme.mediaQueries.sm} {
     padding: 10px 15px;
-    bottom: 10px;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    padding: 20px 35px;
   }
 `;
 
@@ -116,7 +117,9 @@ const LeftRight = styled(Flex)`
 
 const Logo = styled.div`
   margin: 0;
-  @media (max-width: 576px) {
-    margin-top: 10px;
+  margin-top: 10px;
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    margin: 0;
   }
 `;

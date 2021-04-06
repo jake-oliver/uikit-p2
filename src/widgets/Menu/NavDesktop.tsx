@@ -53,7 +53,7 @@ const NavWrapper = styled.div`
 const NavDesktopItem = styled.div`
   margin-right: 14px;
   padding: 12px 6px;
-  color: ${({ theme }) => theme.colors.text};  
+  color: ${({ theme }) => theme.colors.text};
   border-radius: 5px;
   transition: 0.5s all ease;
   &:hover {
