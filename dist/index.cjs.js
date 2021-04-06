@@ -1532,9 +1532,12 @@ var useTable = function (columns, data, options) {
 var breakpointMap = {
     xs: 370,
     sm: 576,
-    md: 852,
-    lg: 968,
+    md: 768,
+    lg: 960,
     xl: 1080,
+    xxl: 1200,
+    xxxl: 1440,
+    enm: 1800,
 };
 var breakpoints = Object.values(breakpointMap).map(function (breakpoint) { return breakpoint + "px"; });
 var mediaQueries = {
@@ -1543,6 +1546,9 @@ var mediaQueries = {
     md: "@media screen and (min-width: " + breakpointMap.md + "px)",
     lg: "@media screen and (min-width: " + breakpointMap.lg + "px)",
     xl: "@media screen and (min-width: " + breakpointMap.xl + "px)",
+    xxl: "@media screen and (min-width: " + breakpointMap.xxl + "px)",
+    xxxl: "@media screen and (min-width: " + breakpointMap.xxxl + "px)",
+    enm: "@media screen and (min-width: " + breakpointMap.enm + "px)",
     nav: "@media screen and (min-width: " + breakpointMap.lg + "px)",
 };
 var shadows = {
@@ -1853,13 +1859,28 @@ var NavDesktop = function (props) {
             React__default['default'].createElement(MenuLink, { href: entry.href, onClick: function () { return void 0; } }, entry.label)));
     })));
 };
-var NavWrapper = styled__default['default'].div(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  margin-top: 5px;\n  margin-left: 1.5rem;\n  padding-bottom: 8px;\n  align-items: flex-start;\n  font-weight: 700;\n\n  @media (max-width: 1023px) {\n    font-size: 0.875rem;\n    margin-left: 1rem;\n  }\n  @media (max-width: 959px) {\n    display: none;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  margin-top: 5px;\n  margin-left: 1.5rem;\n  padding-bottom: 8px;\n  align-items: flex-start;\n  font-weight: 700;\n\n  @media (max-width: 1023px) {\n    font-size: 0.875rem;\n    margin-left: 1rem;\n  }\n  @media (max-width: 959px) {\n    display: none;\n  }\n"])));
-var NavDesktopItem = styled__default['default'].div(templateObject_2$a || (templateObject_2$a = __makeTemplateObject(["\n  margin-right: 14px;\n  color: ", ";\n  padding: 12px 20px;\n  border-radius: 5px;\n  transition: 0.5s all ease;\n  &:hover {\n    color: #000;\n    background: ", ";\n    transition: 0.1s all ease;\n  }\n\n  /* @media (max-width: 1023px) {\n    padding: 14px 8px;\n  } */\n  @media (max-width: 767px) {\n    padding: 14px 8px;\n  }\n  @media (max-width: 479px) {\n    padding: 12px 6px;\n  }\n"], ["\n  margin-right: 14px;\n  color: ", ";\n  padding: 12px 20px;\n  border-radius: 5px;\n  transition: 0.5s all ease;\n  &:hover {\n    color: #000;\n    background: ", ";\n    transition: 0.1s all ease;\n  }\n\n  /* @media (max-width: 1023px) {\n    padding: 14px 8px;\n  } */\n  @media (max-width: 767px) {\n    padding: 14px 8px;\n  }\n  @media (max-width: 479px) {\n    padding: 12px 6px;\n  }\n"])), function (_a) {
+var NavWrapper = styled__default['default'].div(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  display: none;\n\n  ", " {\n    display: block;\n    position: relative;\n    display: flex;\n    margin-left: 1rem;\n    align-items: flex-start;\n    font-size: 0.875rem;\n  }\n  ", " {\n    margin-top: 5px;\n    margin-left: 1.5rem;\n    padding-bottom: 8px;\n    font-weight: 700;\n    font-size: 1rem;\n  }\n  ", " {\n    font-size: 18px;\n  }\n"], ["\n  display: none;\n\n  ", " {\n    display: block;\n    position: relative;\n    display: flex;\n    margin-left: 1rem;\n    align-items: flex-start;\n    font-size: 0.875rem;\n  }\n  ", " {\n    margin-top: 5px;\n    margin-left: 1.5rem;\n    padding-bottom: 8px;\n    font-weight: 700;\n    font-size: 1rem;\n  }\n  ", " {\n    font-size: 18px;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.lg;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.xl;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.xxxl;
+});
+var NavDesktopItem = styled__default['default'].div(templateObject_2$a || (templateObject_2$a = __makeTemplateObject(["\n  margin-right: 14px;\n  padding: 12px 6px;\n  color: ", ";\n  border-radius: 5px;\n  transition: 0.5s all ease;\n  &:hover {\n    color: #000;\n    background: ", ";\n    transition: 0.1s all ease;\n  }\n\n  ", " {\n    padding: 14px 8px;\n  }\n  ", " {\n    padding: 12px 20px;\n  }\n"], ["\n  margin-right: 14px;\n  padding: 12px 6px;\n  color: ", ";\n  border-radius: 5px;\n  transition: 0.5s all ease;\n  &:hover {\n    color: #000;\n    background: ", ";\n    transition: 0.1s all ease;\n  }\n\n  ", " {\n    padding: 14px 8px;\n  }\n  ", " {\n    padding: 12px 20px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.text;
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.sm;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.md;
 });
 var templateObject_1$x, templateObject_2$a;
 
@@ -2153,9 +2174,18 @@ var Menu = function (_a) {
                 React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React__default['default'].createElement(Avatar, { profile: profile })))));
 };
-var StyledHeader = styled__default['default'].div(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  width: 100%;\n  z-index: 1;\n  padding: 20px 35px;\n  justify-content: space-between;\n  align-items: center;\n  &::after {\n    content: \"\";\n    position: absolute;\n    z-index: -1;\n    background: linear-gradient(to right, #000422 53%, #fff0 20%) repeat-x bottom;\n    -webkit-background-size: 1rem 2px;\n    background-size: 1rem 2px;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: 5px;\n  }\n  @media (max-width: 767px) {\n    padding: 20px;\n  }\n  @media (max-width: 479px) {\n    padding: 10px 15px;\n    bottom: 10px;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  width: 100%;\n  z-index: 1;\n  padding: 20px 35px;\n  justify-content: space-between;\n  align-items: center;\n  &::after {\n    content: \"\";\n    position: absolute;\n    z-index: -1;\n    background: linear-gradient(to right, #000422 53%, #fff0 20%) repeat-x bottom;\n    -webkit-background-size: 1rem 2px;\n    background-size: 1rem 2px;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: 5px;\n  }\n  @media (max-width: 767px) {\n    padding: 20px;\n  }\n  @media (max-width: 479px) {\n    padding: 10px 15px;\n    bottom: 10px;\n  }\n"])));
+var StyledHeader = styled__default['default'].div(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  width: 100%;\n  z-index: 1;\n  padding: 10px 15px;\n  bottom: 10px;\n  justify-content: space-between;\n  align-items: center;\n  &::after {\n    content: \"\";\n    position: absolute;\n    z-index: -1;\n    background: linear-gradient(to right, #000422 53%, #fff0 20%) repeat-x bottom;\n    -webkit-background-size: 1rem 2px;\n    background-size: 1rem 2px;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: 5px;\n  }\n\n  ", " {\n    padding: 10px 15px;\n  }\n  ", " {\n    padding: 20px 35px;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  width: 100%;\n  z-index: 1;\n  padding: 10px 15px;\n  bottom: 10px;\n  justify-content: space-between;\n  align-items: center;\n  &::after {\n    content: \"\";\n    position: absolute;\n    z-index: -1;\n    background: linear-gradient(to right, #000422 53%, #fff0 20%) repeat-x bottom;\n    -webkit-background-size: 1rem 2px;\n    background-size: 1rem 2px;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: 5px;\n  }\n\n  ", " {\n    padding: 10px 15px;\n  }\n  ", " {\n    padding: 20px 35px;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.sm;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.md;
+});
 var LeftRight = styled__default['default'](Flex)(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  justify-content: space-between;\n  align-items: center;\n"], ["\n  justify-content: space-between;\n  align-items: center;\n"])));
-var Logo = styled__default['default'].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  margin: 0;\n  @media (max-width: 576px) {\n    margin-top: 10px;\n  }\n"], ["\n  margin: 0;\n  @media (max-width: 576px) {\n    margin-top: 10px;\n  }\n"])));
+var Logo = styled__default['default'].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  margin: 0;\n  margin-top: 10px;\n\n  ", " {\n    margin: 0;\n  }\n"], ["\n  margin: 0;\n  margin-top: 10px;\n\n  ", " {\n    margin: 0;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.sm;
+});
 var templateObject_1$B, templateObject_2$d, templateObject_3$6, templateObject_4$2;
 
 var links = [
@@ -2273,7 +2303,7 @@ var links = [
     },
 ];
 
-var Footer = function (_a) { return (React__default['default'].createElement(StyledFooter, null,
+var Footer = function (_a) { return (React__default['default'].createElement(React__default['default'].Fragment, null,
     React__default['default'].createElement(Text, null, "\u00A9 Lightening Cash all Rights Reserved."),
     React__default['default'].createElement(FooterSocial, null,
         React__default['default'].createElement(SocialItem, { href: "https://twitter.com/CashLightening" },
@@ -2284,28 +2314,21 @@ var Footer = function (_a) { return (React__default['default'].createElement(Sty
             React__default['default'].createElement(reactFontawesome.FontAwesomeIcon, { icon: freeBrandsSvgIcons.faMediumM, size: "lg" })),
         React__default['default'].createElement(SocialItem, { href: "https://github.com/LighteningCash" },
             React__default['default'].createElement(reactFontawesome.FontAwesomeIcon, { icon: freeBrandsSvgIcons.faGithub, size: "lg" }))))); };
-var StyledFooter = styled__default['default'].div(templateObject_1$C || (templateObject_1$C = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  z-index: ", ";\n  background-color: ", ";\n  margin-top: 24px;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 20px 2rem;\n  width: calc(100% - 150px);\n  border-radius: 30px 30px 0 0;\n  justify-content: space-between;\n  align-items: center;\n\n  @media (max-width: 1199px) {\n    width: calc(100% - 100px);\n    max-width: 1024px;\n  }\n  @media (max-width: 767px) {\n    & > * {\n      font-size: 14px;\n    }\n    flex-direction: column;\n    justify-content: center;\n    padding: 20px;\n    width: calc(100% - 40px);\n    max-width: 540px;\n  }\n  @media (max-width: 479px) {\n    & > * {\n      font-size: 12px;\n    }\n    flex-direction: column;\n    justify-content: center;\n    padding: 20px;\n    width: calc(100% - 40px);\n  }\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  z-index: ", ";\n  background-color: ", ";\n  margin-top: 24px;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 20px 2rem;\n  width: calc(100% - 150px);\n  border-radius: 30px 30px 0 0;\n  justify-content: space-between;\n  align-items: center;\n\n  @media (max-width: 1199px) {\n    width: calc(100% - 100px);\n    max-width: 1024px;\n  }\n  @media (max-width: 767px) {\n    & > * {\n      font-size: 14px;\n    }\n    flex-direction: column;\n    justify-content: center;\n    padding: 20px;\n    width: calc(100% - 40px);\n    max-width: 540px;\n  }\n  @media (max-width: 479px) {\n    & > * {\n      font-size: 12px;\n    }\n    flex-direction: column;\n    justify-content: center;\n    padding: 20px;\n    width: calc(100% - 40px);\n  }\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.zIndices.modal;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.secondaryBright;
-});
-var FooterSocial = styled__default['default'].div(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n  color: ", ";\n  &:hover {\n    color: ", ";\n  }\n  @media (max-width: 767px) {\n    margin-top: 20px;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n  color: ", ";\n  &:hover {\n    color: ", ";\n  }\n  @media (max-width: 767px) {\n    margin-top: 20px;\n  }\n"])), function (_a) {
+var FooterSocial = styled__default['default'].div(templateObject_1$C || (templateObject_1$C = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n  margin-top: 1rem;\n  color: ", ";\n  &:hover {\n    color: ", ";\n  }\n  @media screen and (min-width: 960px) {\n    margin-top: 0;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n  margin-top: 1rem;\n  color: ", ";\n  &:hover {\n    color: ", ";\n  }\n  @media screen and (min-width: 960px) {\n    margin-top: 0;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.text;
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
 });
-var SocialItem = styled__default['default'](Link)(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  margin-left: 10px;\n  color: ", ";\n  &:hover {\n    color: #000;\n    color: ", ";\n  }\n  @media (max-width: 767px) {\n    margin: 0;\n    padding: 0 5px;\n  }\n"], ["\n  margin-left: 10px;\n  color: ", ";\n  &:hover {\n    color: #000;\n    color: ", ";\n  }\n  @media (max-width: 767px) {\n    margin: 0;\n    padding: 0 5px;\n  }\n"])), function (_a) {
+var SocialItem = styled__default['default'](Link)(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n  margin: 0;\n  padding: 0 5px;\n  color: ", ";\n  &:hover {\n    color: #000;\n    color: ", ";\n  }\n  @media screen and (min-width: 960px) {\n    margin-left: 10px;\n    padding: 0;\n  }\n"], ["\n  margin: 0;\n  padding: 0 5px;\n  color: ", ";\n  &:hover {\n    color: #000;\n    color: ", ";\n  }\n  @media screen and (min-width: 960px) {\n    margin-left: 10px;\n    padding: 0;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.text;
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
 });
-var templateObject_1$C, templateObject_2$e, templateObject_3$7;
+var templateObject_1$C, templateObject_2$e;
 
 var links$1 = [
     {
