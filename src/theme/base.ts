@@ -3,8 +3,8 @@ import { MediaQueries, Breakpoints, Spacing } from "./types";
 export const breakpointMap: { [key: string]: number } = {
   xs: 370,
   sm: 576,
-  md: 852,
-  lg: 968,
+  md: 768,
+  lg: 960,
   xl: 1080,
   xxl: 1200,
   xxxl: 1440,
