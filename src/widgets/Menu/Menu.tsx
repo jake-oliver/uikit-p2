@@ -103,6 +103,7 @@ const StyledHeader = styled.div`
   }
 
   ${({ theme }) => theme.mediaQueries.sm} {
+    bottom: 0;
     padding: 10px 15px;
   }
   ${({ theme }) => theme.mediaQueries.md} {
