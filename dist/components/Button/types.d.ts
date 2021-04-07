@@ -9,6 +9,7 @@ export declare const variants: {
     readonly PRIMARY: "primary";
     readonly SECONDARY: "secondary";
     readonly TERTIARY: "tertiary";
+    readonly TERTIARY_DRK: "tertiaryDark";
     readonly TEXT: "text";
     readonly DANGER: "danger";
     readonly SUBTLE: "subtle";
@@ -39,6 +40,7 @@ export declare type ButtonThemeVariant = {
     boxShadow: string;
     boxShadowActive: string;
     color: string;
+    colorHover: string;
 };
 export declare type ButtonTheme = {
     [key in Variants]: ButtonThemeVariant;
