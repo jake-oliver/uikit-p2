@@ -1,7 +1,7 @@
 import { ButtonTheme, variants } from "./types";
 import { lightColors, darkColors } from "../../theme/colors";
 
-const { PRIMARY, SECONDARY, TERTIARY, TEXT, DANGER, SUBTLE, SUCCESS } = variants;
+const { PRIMARY, SECONDARY, TERTIARY, TERTIARY_DRK, TEXT, DANGER, SUBTLE, SUCCESS } = variants;
 
 export const light: ButtonTheme = {
   [PRIMARY]: {
@@ -13,16 +13,18 @@ export const light: ButtonTheme = {
     boxShadow: "0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%)",
     boxShadowActive: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
     color: "#000422",
+    colorHover: "#000422",
   },
   [SECONDARY]: {
     background: "transparent",
     backgroundActive: "transparent",
-    backgroundHover: lightColors.primaryBright + "33",
+    backgroundHover: `${lightColors.primaryBright}33`, // opacity: 20%
     border: `2px solid ${lightColors.primary}`,
     borderColorHover: lightColors.primaryBright,
     boxShadow: "none",
     boxShadowActive: "none",
     color: lightColors.primary,
+    colorHover: lightColors.primary,
   },
   [TERTIARY]: {
     background: lightColors.tertiary,
@@ -33,6 +35,18 @@ export const light: ButtonTheme = {
     boxShadow: "none",
     boxShadowActive: "none",
     color: lightColors.primary,
+    colorHover: lightColors.primary,
+  },
+  [TERTIARY_DRK]: {
+    background: lightColors.tertiaryDark,
+    backgroundActive: lightColors.tertiaryDark,
+    backgroundHover: lightColors.tertiaryDark,
+    border: 0,
+    borderColorHover: "currentColor",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.primary,
+    colorHover: lightColors.card,
   },
   [TEXT]: {
     background: "transparent",
@@ -43,6 +57,7 @@ export const light: ButtonTheme = {
     boxShadow: "none",
     boxShadowActive: "none",
     color: lightColors.primary,
+    colorHover: lightColors.primary,
   },
   [DANGER]: {
     background: lightColors.failure,
@@ -53,6 +68,7 @@ export const light: ButtonTheme = {
     boxShadow: "none",
     boxShadowActive: "none",
     color: "#000422",
+    colorHover: "#000422",
   },
   [SUBTLE]: {
     background: lightColors.textSubtle, // normal input btn
@@ -63,6 +79,7 @@ export const light: ButtonTheme = {
     boxShadow: "none",
     boxShadowActive: "none",
     color: "#000422",
+    colorHover: "#000422",
   },
   [SUCCESS]: {
     background: lightColors.success,
@@ -73,6 +90,7 @@ export const light: ButtonTheme = {
     boxShadow: "none",
     boxShadowActive: "none",
     color: "#000422",
+    colorHover: "#000422",
   },
 };
 
@@ -89,6 +107,14 @@ export const dark: ButtonTheme = {
     backgroundActive: darkColors.tertiary,
     backgroundHover: darkColors.tertiary,
     color: darkColors.primary,
+  },
+  [TERTIARY_DRK]: {
+    ...light.tertiaryDark,
+    background: darkColors.tertiaryDark,
+    backgroundActive: darkColors.toggleHandle,
+    backgroundHover: darkColors.toggleHandle,
+    color: darkColors.primary,
+    colorHover: darkColors.card, // #000422
   },
   [TEXT]: {
     ...light.text,

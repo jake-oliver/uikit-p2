@@ -11,6 +11,7 @@ export const variants = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
   TERTIARY: "tertiary",
+  TERTIARY_DRK: "tertiaryDark",
   TEXT: "text",
   DANGER: "danger",
   SUBTLE: "subtle",
@@ -46,6 +47,7 @@ export type ButtonThemeVariant = {
   boxShadow: string;
   boxShadowActive: string;
   color: string;
+  colorHover: string;
 };
 
 export type ButtonTheme = {
