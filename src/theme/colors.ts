@@ -25,6 +25,7 @@ export const lightColors: Colors = {
   invertedContrast: "#FFFFFF",
   input: "#aaa",
   tertiary: "#f0b90b", // DarkMode button, Menu hover color
+  tertiaryDark: "#f0b90b",
   text: "#000422",
   textDisabled: "#BDC2C4",
   textSubtle: "#ffcd34",
@@ -49,6 +50,7 @@ export const darkColors: Colors = {
   input: "#000422dd",
   primaryDark: "#0098A1",
   tertiary: "#f0b90bb3", // hover (menu item, ButtonMenuItem)
+  tertiaryDark: "#151935",
   text: "#eef",
   textDisabled: "#667",
   textSubtle: "#eee5",
