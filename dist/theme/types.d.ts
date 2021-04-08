@@ -23,6 +23,7 @@ export declare type Shadows = {
     success: string;
     warning: string;
     focus: string;
+    card: string;
     inset: string;
 };
 export declare type Gradients = {
