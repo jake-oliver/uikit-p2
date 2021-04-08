@@ -27,6 +27,7 @@ export type Shadows = {
   success: string;
   warning: string;
   focus: string;
+  card: string;
   inset: string;
 };
 
